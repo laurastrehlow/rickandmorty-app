@@ -1,0 +1,19 @@
+.Card {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    background: url('./images/rick-and-morty.jpg');
+    box-shadow: 0 4px 8px #f9bf1e;
+    text-align: center;
+    color: #f9bf1e;
+}
+
+button {
+    background: #7c3e1d;
+    font-size: 16px;
+    padding: 5px 10px;
+    color: #f9bf1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #f9bf1e;
+    border: none;
+}
