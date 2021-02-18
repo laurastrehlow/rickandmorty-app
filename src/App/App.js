@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Card from './Card'
+import Card from '../Card/Card'
+import Header from '../Header/Header'
 import './App.css'
 
 function App() { 
@@ -22,8 +23,8 @@ function App() {
       } 
 
   return <>
-  <input 
-        value={userInput}
+      <Header title="”To live is to risk it all.” - Rick" />  
+      <input value={userInput}
         onChange={event => setUserInput(event.target.value)} placeholder="Search character..." />
          {
           characters.filter(character => character.name.toLowerCase().includes(userInput.toLowerCase()))

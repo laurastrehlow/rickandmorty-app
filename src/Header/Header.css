@@ -1,0 +1,7 @@
+.Header {
+    background: url('../images/rickandmortybanner.png');
+    padding: 50px;
+    margin: 0 0 10px 0;
+    color: white;
+    font-style: italic;
+}

@@ -2,7 +2,7 @@
     padding: 20px;
     margin: 15px;
     border-radius: 15px;
-    background: url('./images/rick-and-morty.jpg');
+    background: url('../images/rick-and-morty.jpg');
     box-shadow: 0 4px 8px #f9bf1e;
     text-align: center;
     color: #f9bf1e;
