@@ -6,9 +6,9 @@ function App() {
   const [userInput, setUserInput] = useState('')
   const [characters, setCharacters] = useState([])
   
-  useEffect(() => {
+ useEffect(() => {
     getAllCharacters()
-  }) 
+  }, []) 
 
     function getAllCharacters(url = 'https://rickandmortyapi.com/api/character') {
     
@@ -19,7 +19,7 @@ function App() {
           const nextUrl = data.info.next
           nextUrl && getAllCharacters(nextUrl)
         })
-      }
+      } 
 
   return <>
   <input 
