@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import './App.css'
 
 function App() { 
+  const [filteredSpecies, setFilteredSpecies] = useState('all')
   const [userInput, setUserInput] = useState('')
   const [characters, setCharacters] = useState([])
   
@@ -22,13 +23,24 @@ function App() {
         })
       } 
 
+
   return <>
-      <Header title="”To live is to risk it all.” - Rick" />  
+      <Header title="”To live is to risk it all.” - Rick" />
+      <button className="Button"
+        onClick={() => setFilteredSpecies('Human')} 
+        disabled={filteredSpecies === 'Human'}>Humans</button>
+        <button className="Button"
+        onClick={() => setFilteredSpecies('Alien')} 
+        disabled={filteredSpecies === 'Alien'}>Aliens</button>
+        <button className="Button"
+        onClick={() => setFilteredSpecies('all')}
+        disabled={filteredSpecies === 'all'}>All</button>
       <input value={userInput}
         onChange={event => setUserInput(event.target.value)} placeholder="Search character..." />
          {
-          characters.filter(character => character.name.toLowerCase().includes(userInput.toLowerCase()))
+          characters.filter(character => character.name.toLowerCase().includes(userInput.toLowerCase()) && (filteredSpecies === 'all' || character.species === filteredSpecies)) 
           .map(character => <Card key={character.id} name={character.name} species={character.species} image={character.image} status={character.status} location={character.location.name} origin={character.origin.name}/>)}
+        
         </>
 }
 

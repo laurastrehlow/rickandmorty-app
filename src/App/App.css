@@ -1,15 +1,20 @@
 body {
     background: #392c21;
     text-align: center;
+    margin: 0;
 }
 
 input {
-margin: 5px;
-font-size: 16px;
+margin: 15px 10px 0;
+font-size: 18px;
 text-align: center;
 color: #f9bf1e;
 border: none;
 border-radius: 10px;
 background: #7c3e1d;
 box-shadow: 0 4px 8px #f9bf1e;
+}
+
+.Button {
+    margin: 10px;
 }
